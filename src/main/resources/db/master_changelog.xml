@@ -5,10 +5,13 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <include file="src/main/resources/db/changelog/200603_00_vitaly_init_schemawswallet.sql"/>
-    <include file="src/main/resources/db/changelog/200603_01_vitaly_init_credentials.xml"/>
+    <include file="changelog/200603_00_vitaly_init_schemawswallet.sql" relativeToChangelogFile="true"/>
+    <include file="changelog/200603_01_vitaly_init_credentials.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/200603_02_vitaly_init_wallets.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/200603_03_vitaly_init_users.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/200603_04_vitaly_altertable_users_constrains.xml" relativeToChangelogFile="true"/>
 
     <!-- Чтобы добавить свой ченжлог - скопируйте строку ниже и вставьте название файла после "changelog/" -->
-    <!-- <include file="src/main/resources/db/changelog/ /> -->
+    <!-- <include file="src/main/resources/db/changelog/" /> -->
     <!-- Не добавляйте в master_changelog чужие ченжлоги пожлст -->
 </databaseChangeLog>
