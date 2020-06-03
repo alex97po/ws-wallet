@@ -6,18 +6,12 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
 <changeSet id="200603-02" author="vitaly">
-    <createTable tableName="users" schemaName="wswallet">
+    <createTable tableName="wallets" schemaName="wswallet">
         <column autoIncrement="true" name="id" type="INTEGER">
-            <constraints primaryKey="true" primaryKeyName="id"/>
+            <constraints primaryKey="true" primaryKeyName="wallet_id"/>
         </column>
         <column name="name" type="VARCHAR(50)"/>
-        <column name="mail" type="VARCHAR(50)"/>
-        <column name="phonenum" type="VARCHAR(15)"/>
-        <column name="status" type="ENUM('admin','client','manager')"/>
-        <column name="wallet_id" type="INTEGER">
-            <constraints foreignKeyName="fk_login_id" references="credentials" />
-        </column>
-        <column name="login_id" type="INTEGER"/>
+        <column name="money" type="FLOAT"/>
     </createTable>
 </changeSet>
 

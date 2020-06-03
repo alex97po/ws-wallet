@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+<changeSet id="200603-04" author="vitaly">
+    <addForeignKeyConstraint baseTableSchemaName="wswallet" baseTableName="users" baseColumnNames="wallet_id"
+                             constraintName="fk_wallet_id"
+                             referencedTableSchemaName="wswallet" referencedTableName="wallets" referencedColumnNames="id"
+                             onUpdate="CASCADE"
+                             onDelete="SET NULL"
+    />
+    <addForeignKeyConstraint baseTableSchemaName="wswallet" baseTableName="users" baseColumnNames="login_id"
+                             constraintName="fk_login_id"
+                             referencedTableSchemaName="wswallet" referencedTableName="credentials" referencedColumnNames="id"
+                             onUpdate="CASCADE"
+                             onDelete="SET NULL"
+    />
+</changeSet>
+
+
+</databaseChangeLog>
