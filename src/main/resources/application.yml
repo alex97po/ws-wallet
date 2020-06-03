@@ -1,0 +1,7 @@
+spring:
+  liquibase:
+    change-log: classpath:/db/master_changelog.xml
+  datasource:
+    url: jdbc:postgresql://localhost:5432/wallet_management
+    username: postgres
+    password: postgres
